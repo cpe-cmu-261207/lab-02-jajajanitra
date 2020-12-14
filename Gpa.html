@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <style>
+    * {box-sizing: border-box;}
+
+    body {
+        background-color: #FBF5EF;
+        font-family: "Trirong", serif;
+        color: #473024;
+    }
+        #t01 table, th, td {
+          border: 1px solid black;
+          padding: 5px;
+        }
+        #t01 table {
+          border-spacing: 15px;
+        }
+        table{
+            width: 100%;
+        }
+        nav {
+         float: left;
+         width: 30%;
+         padding: 20px;
+        }
+        /* Style the list inside the menu */
+        nav ul {
+         list-style-type: none;
+         padding: 0;
+        }
+        article {
+         float: left;
+         padding: 20px;
+         width: 70%;
+        }
+        /* Clear floats after the columns */
+        section:after {
+         content: "";
+         display: table;
+         clear: both;
+        }    
+        a{
+            color: cadetblue;
+        }
+        a:hover{
+            color: coral;
+        }   
+        @media (max-width: 600px) {
+        nav, article {
+         width: 100%;
+        height: auto;
+        }}
+        .text{
+            font-size: 21px;
+        }
+        .t1{
+            
+            background-color: #b8d194;
+            font-size: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .t2{
+            /* background-color: aqua; */
+            font-size: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            align-self:center;
+        }
+        th,td {
+            text-align:center;
+            width: 33.33%;
+        }
+        </style>
+        <script src = "Calculator.js"></script>
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <td> <a href="Homepage.html"><p style="text-align:center;"> Home </p></a> </td>
+            <td> <a href="Gallery.html"><p style="text-align:center;"> Gallery </p></a> </td>
+            <td> <a href="Gpa.html"><p style="text-align:center;"> GPA Calculator </p></a> </td>
+            <td> <a href="Contact.html"><p style="text-align:center;"> Contact </p></a> </td>
+        </tr> 
+    </table>
+    
+    <table style="width: 100%">
+        <tr>
+            <h2>GPA Calculator</h2>
+            <td>
+                <section>
+                    <nav>
+                        <ul style="text-align: left;">
+                            <li><h2>Course name :</h2></li>
+                            <li><h2>Course no :</h2></li>
+                            <li><h2>Semester :</h2></li>
+                            <li><h2>Weight :</h2></li>
+                            <li><h2>GPA :</h2></li>
+                        </ul>
+                    </nav>
+                    <article>
+                        <form action="/action_page.php">
+                        <p><input type="text" class="text" placeholder="ex : Algorithms" id="subName"><br></p>
+                        <p><input type="text" class="text" placeholder="ex : 261218" id="subID"></p>
+                        <p><select name="semester" class="text" id="semester">
+                            <option value="1-2562">1/2562</option>
+                            <option value="2-2562">2/2562</option>
+                            <option value="1-2563">1/2563</option>
+                            <option value="2-2563">2/2563</option>
+                            <option value="1-2564">1/2564</option>
+                            <option value="2-2564">2/2564</option>
+                            <option value="1-2565">1/2565</option>
+                            <option value="2-2565">2/2565</option>
+                        </select></p>
+                        <p><input type="text" class="text" placeholder="ex : 3" id="weight"></p>
+                        <p><select name="gpa" class="text" id="gpa">
+                            <option value="4" >A
+                            <option value="3.5" >B+
+                            <option value="3" >B
+                            <option value="2.5" >C+
+                            <option value="2" >C
+                            <option value="1.5" >D+
+                            <option value="1" >D
+                            <option value="0" >F
+                        </select></p>
+                        <input type="submit" name="Add"></button>
+                    </form> 
+                    </article>
+                </section>
+            </td>
+            <td>
+                <h1>GPA Calculator</h1>
+                <h2>GPAX : <p id="gpax"></p></h2>
+                <h2>GPA(CPE) : <p id="gpacpe"></p></h2>
+            </td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <h1>Added Course</h1>
+        <tr >
+            <table class="t1">
+                <tr><h2 style="text-align: center;">Semester 1/2562</h2></tr>
+                <tbody id = "1-2562">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id = "gpa1-2562">0.00</p></td>
+                    <td><p id = "w1-2562">0</p></td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table class="t2">
+                <tr><h2 style="text-align: center;">Semester 2/2562</h2></tr>
+                <tbody id = "2-2562">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id = "gpa2-2562">0.00</p></td>
+                    <td><p id = "w2-2562">0</p></td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table class="t1">
+                <tr><h2 style="text-align: center;">Semester 1/2563</h2></tr>
+                <tbody  id = "1-2563">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id = "gpa1-2563">0.00</p></td>
+                    <td><p id = "w1-2563">0</p></td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table class="t2">
+                <tr><h2 style="text-align: center;">Semester 2/2563</h2></tr>
+                <tbody id = "2-2563">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id = "gpa2-2563">0.00</p></td>
+                    <td><p id = "w2-2563">0</p></td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table  class="t1">
+                <tr><h2 style="text-align: center;">Semester 1/2564</h2></tr>
+                <tbody id = "1-2564">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id= "gpa1-2564">0.00</p></t d>
+                    <td><p id= "w1-2564">0</p></t d>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table class="t2">
+                <tr><h2 style="text-align: center;">Semester 2/2564</h2></tr>
+                <tbody  id = "2-2564">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id = "gpa2-2564">0.00</p></td>
+                    <td><p id = "w2-2564">0</p></td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table class="t1">
+                <tr><h2 style="text-align: center;">Semester 1/2565</h2></tr>
+                <tbody id = "1-2565">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id = "gpa1-2565"> 0.00</p></td>
+                    <td><p id = "w1-2565">0</p></td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table class="t2">
+                <tr><h2 style="text-align: center;">Semester 2/2565</h2></tr>
+                <tbody id = "2-2565">
+                    <tr>
+                        <td>Subject</td>
+                        <td>Grade</td>
+                        <td>Weight</td>
+                    </tr>
+                </tbody>
+                <tr>
+                    <td>GPA : </td>
+                    <td><p id = "gpa2-2565">0.00</p></td>
+                    <td><p id = "w2-2565">0</p></td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+    <table>
+        <tr>
+         <h2>Weight</h2>   
+        </tr>
+        <tr >
+            <td>All weight : </td>
+            <td><p id="wx">0</p></td>
+        </tr>
+        <tr>
+            <td>CPE weight : </td>
+            <td><p id="wcpe">0</p></td>
+        </tr>   
+    </table>
+</body>
+</html>

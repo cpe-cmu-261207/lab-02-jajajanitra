@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {box-sizing: border-box;}
+    
+        body {
+            background-color: #FBF5EF;
+            font-family: "Trirong", serif;
+            color: #473024;
+        }
+            #t01 table, th, td {
+              border: 1px solid black;
+              padding: 5px;
+            }
+            table{
+                width: 100%;
+            }
+            #t01 table {
+              border-spacing: 15px;
+            }
+            a{
+            color: cadetblue;
+            }
+            a:hover{
+                color: coral;
+            }
+            nav {
+             float: left;
+             width: 30%;
+             padding: 20px;
+            }
+            /* Style the list inside the menu */
+            nav ul {
+             list-style-type: none;
+             padding: 0;
+            }
+            article {
+             float: left;
+             padding: 20px;
+             width: 70%;
+            }
+            /* Clear floats after the columns */
+            section:after {
+             content: "";
+             display: table;
+             clear: both;
+            }       
+            @media (max-width: 600px) {
+            nav, article {
+             width: 100%;
+            height: auto;
+      }
+    }
+    </style>
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <td> <a href="Homepage.html"><p style="text-align:center;"> Home </p></a> </td>
+            <td> <a href="Gallery.html"><p style="text-align:center;"> Gallery </p></a> </td>
+            <td> <a href="Gpa.html"><p style="text-align:center;"> GPA Calculator </p></a> </td>
+            <td> <a href="Contact.html"><p style="text-align:center;"> Contact </p></a> </td>
+        </tr> 
+    </table>
+    <table align="center">
+        <tr style="text-align: center;">
+            <td ><h2>Janitra Chaikird</h2>
+                <h4>Computer Engineering Student</h4>
+                <h3>janitra_chai@cmu.ac.th</h3></td>
+            <td><img src="jj.jpg" alt="myself" style="width:250px;height:250px;align-items: baseline;"></td>
+        </tr>
+    </table>
+        <table style="width: 100%">
+            <h2>Contact</h2>
+            <form action="/action_page.php">
+            <tr>
+                <td>
+                    <section>
+                        <nav>
+                            <ul>
+                                <li><h4>First name :</h4></li>
+                                <li><h4>Last name :</h4></li>
+                                <li><h4>Subject :</h4></li>
+                                <li><h4>Massage :</h4></li>
+                                <li><h4>Phone :</h4></li>
+                                <li><h4>E-mail :</h4></li>
+                            </ul>
+                        </nav>
+                        <article>
+                            <form action="/action_page.php">
+                                <p><input type="text" id="fname" name="fname"></p>
+                                <p><input type="text" id="lname" name="lname"></p>
+                                <P><input type="text" id="subject" name="subject"></P>
+                                <P><input type="text" id="massage" name="massage"></P>
+                                <P><input type="text" id="phone" name="phone"></P>
+                                <P><input type="text" id="mail" name="mail"></P>
+                                <br><input type="submit" value="Submit" >
+                            </form>
+                        </article>
+                    </section>
+                </td>
+            </tr>
+</body>
+</html>
